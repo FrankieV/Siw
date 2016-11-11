@@ -1,0 +1,1 @@
+var pluto = prompt("Dal file: inserisci valore");

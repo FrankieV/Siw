@@ -1,0 +1,81 @@
+<html>
+
+<head>
+<title>Esercizio 3</title>
+
+<script type="text/javascript">
+	
+var persone = new Array();
+
+var Persona = function(nome, cognome,indirizzo)
+{
+	this.nome = nome;
+	this.cognome = cognome;
+	this.indirizzo = indirizzo;
+}
+
+	aggiungiPersone = function(){
+
+		for(var i = 0; i < 3; i++ )
+		{
+			var nome = prompt("Inserisci il nome della persona " + i);
+			var cognome = prompt("Inserisci il cognome della persona " + i);
+			var indirizzo = prompt("Inserisci indirizzo della persona " + i);
+			var persona = new Persona(nome,cognome,indirizzo);
+			persone[i] = persona;
+		}
+		
+	}
+	
+	function allPerson(){
+		document.write("<ul>");
+
+		for(var i = 0; i < persone.length; i++)
+		{
+			document.write("<li>" + persone[i].nome + " " + persone[i].cognome + " " + persone[i].indirizzo + "</li>");
+		}
+
+		document.write("</ul>");
+
+	}
+	
+	function findPerson(){
+		var personToFind = prompt("Inserisci il nome della persona da ricercare");
+		var presente = false;
+		
+		for(var i = 0; i < persone.length; i++)
+		{
+			if(personToFind === persone[i].nome){
+				presente = true;
+				break;
+			}
+		}
+		
+		if(!presente)
+		alert("La persona non e' presente :(");
+		else
+		alert("La persona e' presente :)");
+	
+	}
+	
+	
+</script>
+
+</head>
+
+<body>
+
+<p> Clicca per aggiungere o listare le persone presenti nell'array </p>
+
+<input type="button" onclick="aggiungiPersone();" value="Aggiungi persone"/>
+<input type="button" onclick="allPerson();" value="Lista persone"/>
+<p> Puoi ricercare le persone per nome </p>
+<input type="button" onclick="findPerson();" value="Avvia ricerca"/>
+
+
+
+
+</body>
+
+
+</html>

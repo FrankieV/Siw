@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<title>Esercitazione del 10.11.2016</title>
+<script type="text/javascript" src="userRequest.js"></script>
+</head>
+
+<body>
+<p>Pagina di prova</p>
+<script type="text/javascript">
+document.write("Benvenuto " + nome + " " + cognome);
+
+	function autorize()
+	{
+		
+		var r = window.confirm("Accetti l'azutorizzazione al trattamento dei dati?");
+		if (r == true) {
+			document.write("Hai accettato le condizioni di licenza");
+		} else {
+         document.write("Non hai accettato le condizioni di licenza");
+		}
+	}
+
+</script>
+
+<p>Autorizzazione al trattamento dei dati </p>
+
+<input type="button" onclick="autorize();" value="Leggi l'autorizzazione"/>
+
+
+</body>
+
+
+</html>
