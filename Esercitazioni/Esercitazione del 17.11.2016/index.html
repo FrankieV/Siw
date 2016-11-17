@@ -1,0 +1,48 @@
+<html>
+<head> 
+	<title> Lista contatti </title>
+	<script src="gestorecontatti.js" type="text/javascript"></script>
+</head>
+<body>
+<table>
+	<thead>
+		<th>
+		Firstname
+		</th>
+		<th>
+		Lastname
+		</th>
+		<th>
+		Phone
+		</th>
+		<th>
+		Email
+		</th>
+	
+	</thead>
+	<tbody id="tBody">
+		<tr id="ultimaRiga">
+			<td>
+			<input type="text" placeholder="Firstname" id="nome"/>
+			</td>
+			<td>
+			<input type="text" placeholder="Lastname" id="cognome"/>
+			</td>
+			<td>
+			<input type="text" placeholder="Phone" id="phone"/>
+			</td>
+			<td>
+			<input type="text" placeholder="Email" id="email"/>
+			</td>
+			<td>
+			<input type="button" value="Add contact" id="addContatto" onclick="aggiungiContatto(creaContatto());"/>
+			</td>
+		</tr>
+	</tbody>
+
+</table>
+
+</body>
+
+
+</html>
